@@ -1,0 +1,25 @@
+{
+  "name": "Cool-Component-Lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ezekieldl/Cool-Component-Lib.git",
+  "author": "Ezekiel De Leon <ezekiel.de.leon@jci.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@storybook/addon-actions": "^6.2.8",
+    "@storybook/addon-essentials": "^6.2.8",
+    "@storybook/addon-links": "^6.2.8",
+    "@storybook/react": "^6.2.8",
+    "@types/react": "^17.0.3",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
