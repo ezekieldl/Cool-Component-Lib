@@ -1,15 +1,13 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 import "./button.css";
+
 
 export interface ButtonProps  {
   /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
    * What background color to use
    */
-  backgroundColor?: string;
+  color?: 'default' | 'inherit' | 'primary'| 'secondary';
   /**
    * How large should the button be?
    */
@@ -29,28 +27,18 @@ export interface ButtonProps  {
 /**
  * Primary UI component for user interaction
  */
-const Button = ({
-  primary = true,
-  backgroundColor,
-  size = "medium",
+const DefaultButton = ({
+  color = 'primary',
+  size = 'medium',
   onClick,
   label,
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
-      )}
-      style={backgroundColor ? { backgroundColor }: {}}
-      onClick={onClick}
-    >
+    <Button onClick={onClick} size={size} color={color} variant="contained">
       {label}
-    </button>
+    </Button>
   );
 };
 
-export default Button;
+
+export default DefaultButton;
